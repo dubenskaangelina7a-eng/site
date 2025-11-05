@@ -1,0 +1,130 @@
+/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  background-color: #D8BFD8;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Бургер-кнопка */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  color: white;
+}
+
+/* Меню навігації */
+nav .menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 10px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 1000px; /* велика висота за замовчуванням */
+}
+
+nav .menu li {
+  margin: 10px 15px;
+}
+
+nav .menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Основна частина */
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #eee;
+  font-size: 0.9em;
+}
+
+/* --- Адаптивність --- */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  /* Показуємо бургер */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Меню за замовчуванням сховане */
+  nav .menu {
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+  }
+
+  nav.active .menu {
+    max-height: 500px; /* меню відкривається при натисканні бургер */
+  }
+
+  nav .menu li {
+    margin: 8px 0;
+  }
+
+  main {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  nav .menu a {
+    font-size: 16px;
+  }
+}

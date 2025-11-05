@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна | Мій сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Головна</h1>
+        <!-- Бургер -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <nav id="nav">
+            <ul class="menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="about.html">Про нас</a></li>
+                <li><a href="services.html">Послуги</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ласкаво просимо!</h2>
+            <p>Це наша головна сторінка. Ми раді бачити вас тут!</p>
+            <p>Прошу перейти на інші розділи сайту, якщо вас цікавить інша інформація про нашу компанію</p>
+            <img src="img1.jpg" alt="Зображення">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Сайт Дубенської Ангеліни. Усі права, певне, захищені.</p>
+    </footer>
+
+    <!-- Скрипт для бургер-меню -->
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.getElementById('nav');
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
